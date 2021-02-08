@@ -12,7 +12,10 @@ function print(text) {
  * @returns {boolean}
  */
 function isValid(name) {
-  // ваш код...
+  let result = (Boolean(name) && 
+    name.length >= 4 && 
+    !name.includes(" "));
+  return result;
 }
 
 function sayHello() {
