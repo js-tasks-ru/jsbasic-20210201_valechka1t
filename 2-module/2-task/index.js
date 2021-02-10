@@ -4,5 +4,9 @@
  * @returns {Boolean}
  */
 function isEmpty(obj) {
-  // ваш код...
+    if ( "test" in obj ) {
+      return false;
+    } else {
+      return true;
+    }
 }
