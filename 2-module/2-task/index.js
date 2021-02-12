@@ -4,9 +4,8 @@
  * @returns {Boolean}
  */
 function isEmpty(obj) {
-    if ( "test" in obj ) {
-      return false;
-    } else {
-      return true;
-    }
+  for ( let key in obj ) {
+    return false;
+    } 
+    return true; 
 }
