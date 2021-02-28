@@ -1,10 +1,16 @@
-function makeFriendsList(friends) {
-  let li = '';
-for (let key in friends) {
-li += '<li>' + key + makeFriendsList(friends[key]) + '</li>';
-}
-if (li) {
-let ul = '<ul>' + li + '</ul>'
-}
-return ul || '';
+function makeFriendsList(friends) { 
+
+  let ul = document.createElement('ul');
+
+  let FriendsFullNames = [];
+  for (let i = 0; i < friends.length; i++) {
+    FriendsFullNames.push(`${friends[i].firstName} ${friends[i].lastName}`);
+  }
+  
+  for (let fullName of FriendsFullNames) {
+    let li = document.createElement('li');
+    ul.insertAdjacentHTML('beforeEnd', `<li>${fullName}</li>`);
+    }
+
+  return ul; 
 }
