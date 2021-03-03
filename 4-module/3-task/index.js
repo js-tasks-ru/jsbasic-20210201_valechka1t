@@ -1,6 +1,6 @@
 function highlight(table) {
 
-  let tableRows = document.getElementsByTagName('tr');
+  let tableRows = table.rows;
   let indexGender;
   let indexStatus;
   let indexAge;
